@@ -4,11 +4,14 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Brand;
+use App\Models\Category;
 use App\Models\Mattress;
 use App\Models\MattressSample;
 use App\Models\ModularCouch;
 use App\Models\ModularCouchPart;
 use App\Models\ModularCouchSample;
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -41,5 +44,9 @@ class DatabaseSeeder extends Seeder
                 });
             });
         });
+
+        Brand::factory(config('app.brands_count'))->create();
+        Category::factory(config('app.categories_count'))->create();
+        Product::factory(config('app.products_count'))->create();
     }
 }

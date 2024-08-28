@@ -130,4 +130,8 @@ return [
     'modular_couches_count' => 6,
     'modular_couch_parts_count' => 5,
     'modular_couch_samples_count' => 5,
+
+    'products_count' => 100,
+    'brands_count' => 10,
+    'categories_count' => 10,
 ];
